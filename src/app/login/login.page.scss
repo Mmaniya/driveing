@@ -1,0 +1,17 @@
+.background-image{
+    --background: url('../../assets/icon/flag.jpg') center fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size:contain;
+}
+ion-list{
+    background-color: transparent;
+}
+ion-item{
+    --ion-background-color:transparent;
+ }
+
+ ion-menu-button{
+    color: #fff;
+  }

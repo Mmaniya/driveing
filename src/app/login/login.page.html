@@ -1,0 +1,29 @@
+
+<ion-content fullscreen class="background-image">
+  <ion-grid style="height: 100%;"  >
+      <ion-row justify-content-center align-items-center style="height: 100%">
+           
+        <ion-list class="ion-no-margin ion-no-padding" >
+
+          <ion-item >
+            <ion-label position="stacked">E-Mail<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  required type="email" [(ngModel)]="username" name="username" ngModel ></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input required type="password" [(ngModel)]="password" name="password" ngModel></ion-input>
+          </ion-item>
+
+
+          <div class="ion-padding">
+            <ion-button expand="block" (click)="checkUser()" type="button" class="ion-no-margin">Login</ion-button>
+          </div>
+          
+        </ion-list>
+    
+        <ion-label class="ion-padding" routerLink="/signup">New User?</ion-label>
+
+      </ion-row>
+    </ion-grid>
+</ion-content>

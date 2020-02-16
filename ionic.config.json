@@ -1,0 +1,7 @@
+{
+  "name": "gst",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
