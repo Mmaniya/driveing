@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { SMS } from '@ionic-native/sms/ngx';
 
 @Component({
   selector: 'app-profile',
@@ -16,9 +17,9 @@ export class ProfilePage implements OnInit {
   validdate:any;
   validtimes:any;
   dataSource = []
-  constructor(private storage: Storage) { 
+  constructor(private storage: Storage, private sms: SMS) { 
     this.storage.get('storedata').then((val) => {
-      console.log(val)
+      console.log(val);
       this.dataSource = val
       // this.validName = val.firstname;
       // this.validEmail = val.email;
@@ -30,6 +31,9 @@ export class ProfilePage implements OnInit {
       // this.validtimes = val.times;
 
     });
+  }
+  sendSms(){
+    this.sms.send('7373898190','Your Booking confirmed.!');
   }
 
   ngOnInit() {
