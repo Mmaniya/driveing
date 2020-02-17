@@ -29,7 +29,6 @@ export class ProfilePage implements OnInit {
       // this.validgender = val.gender;
       // this.validdate = val.date;
       // this.validtimes = val.times;
-
     });
   }
   sendSms(){

@@ -19,6 +19,7 @@ dataModel = [];
   gender:string = "";
   date:string ="";
   times:string="";
+  feedback: string ="";
   constructor(private http: HttpClient, public storage: Storage, private router: Router, private NavCtrl: NavController) {
     this.storage.set('storedata', []);
     this.getTheValue();
@@ -38,6 +39,7 @@ dataModel = [];
           "gender": this.gender,
           "date":this.date,
           "times":this.times,
+          "feedback":this.feedback,
       }
       console.log(this.dataModel)
       this.dataModel.push(postData)
