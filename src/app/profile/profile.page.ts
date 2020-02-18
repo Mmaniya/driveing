@@ -8,31 +8,17 @@ import { SMS } from '@ionic-native/sms/ngx';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-  validName: any;
-  validEmail: any;
-  validMobile: any;
-  validage: any;
-  validaddress: any;
-  validgender: any;
-  validdate:any;
-  validtimes:any;
+  mobile:any;
   dataSource = []
   constructor(private storage: Storage, private sms: SMS) { 
     this.storage.get('storedata').then((val) => {
-      console.log(val);
       this.dataSource = val
-      // this.validName = val.firstname;
-      // this.validEmail = val.email;
-      // this.validMobile = val.mobile;
-      // this.validage = val.age;
-      // this.validaddress = val.address;
-      // this.validgender = val.gender;
-      // this.validdate = val.date;
-      // this.validtimes = val.times;
     });
   }
-  sendSms(){
-    this.sms.send('7373898190','Your Booking confirmed.!');
+  sendSms(event ,item ){
+    this.mobile = JSON.stringify(item.mobile);
+    // alert(this.mobile);
+    this.sms.send(this.mobile,'Your Booking confirmed.!');
   }
 
   ngOnInit() {
