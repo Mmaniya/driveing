@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NavController} from '@ionic/angular';
+import { NavController, MenuController} from '@ionic/angular';
 import { Router } from '@angular/router'; 
 import { Storage } from '@ionic/storage';
-import { MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'app-signup',
@@ -21,7 +20,7 @@ dataModel = [];
   date:string ="";
   times:string="";
   feedback: string ="";
-  constructor(private http: HttpClient,private menuCtrl:MenuController, public storage: Storage, private router: Router, private NavCtrl: NavController) {
+  constructor(private http: HttpClient,public menuCtrl:MenuController, public storage: Storage, private router: Router, private NavCtrl: NavController) {
     this.storage.set('storedata', []);
     this.getTheValue();
    }
