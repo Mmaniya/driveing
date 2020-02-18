@@ -17,7 +17,6 @@ export class ProfilePage implements OnInit {
   }
   sendSms(event ,val ){
     this.mobile = JSON.stringify(val.mobile);
-    alert(this.mobile);
     this.sms.send(this.mobile,'Your Booking confirmed.!');
   }
 
