@@ -15,9 +15,9 @@ export class ProfilePage implements OnInit {
       this.dataSource = val
     });
   }
-  sendSms(event ,item ){
-    this.mobile = JSON.stringify(item.mobile);
-    // alert(this.mobile);
+  sendSms(event ,val ){
+    this.mobile = JSON.stringify(val.mobile);
+    alert(this.mobile);
     this.sms.send(this.mobile,'Your Booking confirmed.!');
   }
 
