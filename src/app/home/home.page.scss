@@ -1,0 +1,45 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.text-size{
+  font-size: 10px;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+
+ion-card{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  margin: 0 !important;
+}
+ion-card img{
+  margin: auto;
+  height: 36%;
+  width: 36%;
+  display: block;
+  margin-top: 5%;
+}
+.new-background-color{
+  // --background: linear-gradient(to right, #2fdee0,#041d2c);
+  --background: rgb(4,29,44);
+  --background: linear-gradient(90deg, rgba(234, 246, 253, 0.7721463585434174) 0%, rgba(190, 254, 255, 0.7413340336134453) 100%);
+}
+ion-title {
+  font-size: 1rem !important; // Default should be 2.0rem
+  color: #fff;
+  font-weight: 700;
+}
+ion-menu-button{
+  color: #fff;
+}
+.background-image{
+  --background: url('../../assets/icon/flag.jpg') center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size:contain;
+}
+

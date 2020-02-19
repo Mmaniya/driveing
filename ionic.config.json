@@ -1,5 +1,7 @@
 {
   "name": "driving-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

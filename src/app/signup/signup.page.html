@@ -1,0 +1,86 @@
+<ion-content fullscreen class="background-image">
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col size="12">
+        <h4 class="alignme">Welcome To Our Driving School</h4>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input required type="text" [(ngModel)]="firstname" id="rounded"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Mobile <ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input type="tel" required pattern="[0-9]{11}" [(ngModel)]="mobile"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">E-Mail<ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input required type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Age<ion-text color="danger">*</ion-text>
+          </ion-label>
+          <ion-input required type="number" [(ngModel)]="age"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Address</ion-label>
+          <ion-input type="email" [(ngModel)]="address"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-radio-group [(ngModel)]="gender">
+          <ion-col size="6">
+            <ion-item>
+              <ion-label>Male</ion-label>
+              <ion-radio slot="start" color="tertiary" value="male" checked></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label>Female</ion-label>
+              <ion-radio slot="start" color="tertiary" value="female"></ion-radio>
+            </ion-item>
+          </ion-col>
+
+        </ion-radio-group>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Date</ion-label>
+          <ion-input type="date" [(ngModel)]="date"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Time</ion-label>
+          <ion-input type="time" [(ngModel)]="times"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked">Feedback</ion-label>
+          <ion-textarea placeholder="Enter more feedback here..." [(ngModel)]="feedback"></ion-textarea>
+        </ion-item>
+      </ion-col>
+      <div class="ion-padding">
+        <ion-button expand="block" (click)="setTheValue()" type="button" expand="full" color="secondary" size="large"
+          class="ion-no-margin">Create accounts
+        </ion-button>
+      </div>
+      <ion-col size="12">
+        <ion-label class="ion-padding" routerLink="/login">Admin Login</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
