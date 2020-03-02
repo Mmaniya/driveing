@@ -16,16 +16,16 @@
         <ion-label>E-Mail : {{val.email}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Gender : {{val.mobile}}</ion-label>
+        <ion-label>Gender : {{val.gender}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Mobile : {{val.age}}</ion-label>
+        <ion-label>Mobile : {{val.mobile}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Age : {{val.address}}</ion-label>
+        <ion-label>Age : {{val.age}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Address : {{val.gender}}</ion-label>
+        <ion-label>Address : {{val.address}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>Date : {{val.date}}</ion-label>
@@ -36,8 +36,18 @@
       <ion-item>
         <p>Feedback : {{val.feedback}}</p>
       </ion-item>
-      <ion-button expand="full" color="secondary" (click)="sendSms($event,val)">
-        send sms
-      </ion-button>
+      <ion-item>
+        <ion-col  size="6">
+          <ion-button expand="full" color="secondary" (click)="sendSms($event,val)">
+            send sms
+          </ion-button>
+        </ion-col>
+        <ion-col  size="6">
+          <ion-button expand="full" color="danger" (click)="cancel($event,val)">
+            cancel
+          </ion-button>
+        </ion-col>
+    </ion-item>
+
     </ion-card>
 </ion-content>

@@ -60,6 +60,44 @@ export class ProfilePage implements OnInit {
         }
     }
 
+    cancel(event ,val ){
+      this.mobile = JSON.stringify(val.mobile);
+          this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.SEND_SMS).then(
+              success => {
+                  if (!success.hasPermission) {
+                      this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.SEND_SMS).
+                      then((success) => {
+                              this.cancelMessage();
+                          },
+                          (err) => {
+                              console.error(err);
+                          });
+                  } else {
+                      this.cancelMessage();
+                  }
+              },
+              err => {
+                  this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.SEND_SMS).
+                  then((success) => {
+                          this.cancelMessage();
+                      },
+                      (err) => {
+                          console.error(err);
+                      });
+              });
+              this.mobile = JSON.stringify(val.mobile);
+      }
+  
+      cancelMessage(){
+          if(SMS) {
+              SMS.cancel(this.mobile, "Your Booking Cancel.!", () => {
+                  console.log('Message sent successfully');
+              }, (error) => {
+                  console.error(error);
+              });
+          }
+      }
+
   // sendSms(event ,val ){
   //   this.mobile = JSON.stringify(val.mobile);
   //   this.sms.send(this.mobile,'Your Booking confirmed.!');
